@@ -9,6 +9,7 @@ private:
     std::string employeeHireDate;
 public:
     Employee();
+    Employee(std::string employeeName, int employeeNumber, std::string employeeHireDate);
     std::string getEmployeeName() const;
     int getEmployeeNumber() const;
     std::string getEmployeeHireDate() const;
@@ -16,7 +17,6 @@ public:
     void setEmployeeName(std::string employeeName);
     void setEmployeeNumber(int employeeNumber);
     void setEmployeeHireDate(std::string employeeHireDate);
-
 };
 
 #endif
