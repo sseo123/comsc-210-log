@@ -1,4 +1,7 @@
+#ifndef PRODUCTIONWORKER_H
+#define PRODUCTIONWORKER_H
 #include "Employee.h"
+
 
 class ProductionWorker : public Employee {
 private: 
@@ -14,3 +17,4 @@ public:
     void setShift(int shift);
     void setHourlyPayRate(double hourlyPayRate);
 };
+#endif
