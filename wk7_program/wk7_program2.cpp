@@ -4,12 +4,13 @@ using std::cout; using std::cin; using std::endl;
 #include "ShiftSupervisor.h"
 #include <iomanip>
 
-
+//this gets in the superviosr information, makes sure salary and bonus are typed correctly and then then displays the results.
 int main() {
     std::string input;
 
 
     do {
+        //makes a ShiftSupervisor object called supervisor
         ShiftSupervisor supervisor;
         std::string supervisorName;
         int employeeNumber;
@@ -32,15 +33,17 @@ int main() {
 
         cout << "Enter annual salary: ";
         cin >> annualSalary;
+        //makes sure the salary is at least > 0
         while (annualSalary < 0) {
-            cout << "Enter a value greater than or equal to 0: ";
+            cout << "Invalid salary. Enter a value greater than or equal to 0:";
             cin >> annualSalary;
         }
         supervisor.setAnnualSalary(annualSalary);
         cout << "Enter annual production bonus: ";
         cin >> annualProdBonus;
+        //makes sure the bonus is > 0
         while (annualProdBonus < 0) {
-            cout << "Enter a value greater than or equal to 0: ";
+            cout << "Invalid bonus. Enter a value greater than or equal to 0:";
             cin >> annualProdBonus;
         }
         supervisor.setAnnualProdBonus(annualProdBonus);

@@ -4,11 +4,12 @@ using std::cout; using std::cin; using std::endl;
 #include "ProductionWorker.h"
 #include <iomanip>
 
-
+//the user has to enter worker information, then it checks if the shifts are 1 or 2 and pay rate is possitive 
 int main() {
     std::string input;
     
     do {
+        //makes a ProductionWorker object called human
         ProductionWorker human;
         std::string employeeName;
         int employeeNumber;
@@ -31,6 +32,7 @@ int main() {
 
         cout << "Enter shift(1 = Day, 2 = Night): ";
         cin >> shift;
+        //validate that it's either 1 or 2, nothing else
         while (shift != 1 && shift != 2) {
             cout << "Invalid shift. Enter 1 for Day or 2 for Night: ";
             cin >> shift;

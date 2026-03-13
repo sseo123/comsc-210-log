@@ -20,3 +20,5 @@
     the fix: if EMPLOYEE_H doesn't exist or hasn't been defined yet (ifndef EMPLOYEE_H), define it right now (define EMPLOYEE_H) and then #endif at the end to close the guard rails 
 
     
+6. this->
+    I used "this->" in my .cpp files because my data member had the same name ddeclaration as the parameter being taken in. so it would be (data member = parameter) with this, or you can just switch the names into something that's not the same. this-> is used to resolve name conflicts and access data members of the current object

@@ -13,7 +13,7 @@ public:
     double getAnnualSalary() const;
     double getAnnualProdBonus() const;
 
-    void setAnnualSalary(double annualSalar);
+    void setAnnualSalary(double annualSalary);
     void setAnnualProdBonus(double annualProdBonus);
 };
 #endif
