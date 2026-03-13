@@ -2,6 +2,7 @@
 using std::cout; using std::cin; using std::endl;
 #include <string>
 #include "ProductionWorker.h"
+#include <iomanip>
 
 
 int main() {
@@ -44,7 +45,7 @@ int main() {
         human.setHourlyPayRate(hourlyPayRate);
         cout << endl;
 
-        
+
         cout << "Employee Information" << endl;
         cout << "--------------------------------" << endl;
         cout << "Name: " << human.getEmployeeName() << endl;
@@ -57,7 +58,7 @@ int main() {
         else {
             cout << " (Night)" << endl;
         }
-        cout << "Hourly Pay Rate: $" << human.getHourlyPayRate() << endl;
+        cout << "Hourly Pay Rate: $" << std::fixed << std::setprecision(2) << human.getHourlyPayRate() << endl;
         cout << endl;
         cout << endl;
 

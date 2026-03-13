@@ -18,3 +18,5 @@
 5. #ifndef EMPLOYEE_H, #define EMPLOYEE_H, #endif
     the problem: if you have multiple files calling the same file, during compilation, the program will try define the same class twice or more and then run into an error.
     the fix: if EMPLOYEE_H doesn't exist or hasn't been defined yet (ifndef EMPLOYEE_H), define it right now (define EMPLOYEE_H) and then #endif at the end to close the guard rails 
+
+    
