@@ -22,3 +22,6 @@
     
 6. this->
     I used "this->" in my .cpp files because my data member had the same name ddeclaration as the parameter being taken in. so it would be (data member = parameter) with this, or you can just switch the names into something that's not the same. this-> is used to resolve name conflicts and access data members of the current object
+
+7. try, throw, catch syntax
+    Since you don't want things to suddently break, you impliment a try, throw, and catch. Try means if you have code that might break, throw a certain output that will instaly exit the current try block and jump to the catch block. Catch will return or handle the error rather than just crashing. 

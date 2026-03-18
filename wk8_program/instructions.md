@@ -2,7 +2,10 @@ Write the following two programs in C++. Upload your separate cpp and h files wh
 
 *Include meaningful comments throughout your code explaining the purpose of variables, logic, and major steps.
 
-Program 1:   Date Exceptions
+
+
+PROGRAM #1
+Date Exceptions
 
 Modify the Date class in the file (Date.cpp Download Date.cpp Download Date.cpp).
 
@@ -41,7 +44,11 @@ Enter a year: 2026
 Date entered successfully.
 Current date: 5/18/2026
 
-Program 2:  Minimum/Maximum Templates
+
+
+
+PROGRAM #2
+Minimum/Maximum Templates
 
 Write function templates for the two functions minimum and maximum. The minimum function should accept two arguments and return the value of the argument that is the lesser of the two. The maximum function should accept two arguments and return the value of the argument that is the greater of the two. Design and demonstrate a simple driver program that demonstrates the function templates with various data types.
 
