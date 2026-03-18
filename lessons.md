@@ -23,5 +23,13 @@
 6. this->
     I used "this->" in my .cpp files because my data member had the same name ddeclaration as the parameter being taken in. so it would be (data member = parameter) with this, or you can just switch the names into something that's not the same. this-> is used to resolve name conflicts and access data members of the current object
 
-7. try, throw, catch syntax
+7. try, throw, catch syntax:
     Since you don't want things to suddently break, you impliment a try, throw, and catch. Try means if you have code that might break, throw a certain output that will instaly exit the current try block and jump to the catch block. Catch will return or handle the error rather than just crashing. 
+    a. If the try block throws something, then to ensure the memeory is managed correctly, c++ does something called stack unwinding. This in short just goes through the function calls and blocks to find a matching catch, then as it exits it calls the destructors for all objects that were created in the try block.  
+
+8. function template:
+    To reduce redundant code, if you need a function that performs the same thing regardless of the parameter, then you can use a function template. (DRY)
+    Template:
+    template <typename T> T myMax(T x, T y){
+    return (x > y) ? x : y;
+    }
