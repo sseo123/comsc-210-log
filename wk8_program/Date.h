@@ -14,9 +14,8 @@ public:
 class InvalidMonth : public std::exception {
 public:
     virtual const char* what() const noexcept override {
-        return "Error: Invalid month entered"
+        return "Error: Invalid month entered";
     }
-
 };
 
 const int NUM_MONTHS = 12;
@@ -28,6 +27,7 @@ private:
     int year;
     std::string names[NUM_MONTHS];
 
+    void setName();
 public:
    // Constructors
    Date();
