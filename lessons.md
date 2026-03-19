@@ -27,9 +27,11 @@
     Since you don't want things to suddently break, you impliment a try, throw, and catch. Try means if you have code that might break, throw a certain output that will instaly exit the current try block and jump to the catch block. Catch will return or handle the error rather than just crashing. 
     a. If the try block throws something, then to ensure the memeory is managed correctly, c++ does something called stack unwinding. This in short just goes through the function calls and blocks to find a matching catch, then as it exits it calls the destructors for all objects that were created in the try block.  
 
-8. function template:
+8. function template, function overload:
     To reduce redundant code, if you need a function that performs the same thing regardless of the parameter, then you can use a function template. (DRY)
     Template:
     template <typename T> T myMax(T x, T y){
     return (x > y) ? x : y;
     }
+    Function overloading is when you write multiple functions with the same name, just different parameter types and number of parameters. In addition, you have to specify the parameters when you are writing each function, so each function is tailored for it's specific type and role. However, function templates allow for any type because you use a generic parameter when writing the function template. However, templates use the same logic for all types, while function overloading allows you to customize the operations for each type. You could use a function overloading when you have specific tasks you want the function to perform, and you could use function template when you have a lot of operations that do the same thing, but just with different data types. Code reusability would definitely be better if you used the function template, but the flexability would be greater for the function overloading. 
+
