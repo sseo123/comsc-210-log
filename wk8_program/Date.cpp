@@ -79,16 +79,12 @@ void Date::showDate1(){
 // Displays the date in the following
 // form: December 25, 2014
 void Date::showDate2(){
-   cout << names[month+1]
-        << " " << day << ", "
-        << year << endl;
+   cout << names[month-1] << " " << day << ", " << year << endl;
 }
 
 // Member function showDate3
 // Displays the date in the following
 // form: 25 December, 2014
 void Date::showDate3(){
-   cout << day << " " 
-        << names[month+1] 
-        << " " << year << endl;
+   cout << day << " " << names[month-1] << " " << year << endl;
 }
