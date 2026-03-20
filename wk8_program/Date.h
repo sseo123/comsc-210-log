@@ -27,7 +27,7 @@ private:
     int year;
     std::string names[NUM_MONTHS];
 
-    void setName();
+    void setNames();
 public:
    // Constructors
    Date();
