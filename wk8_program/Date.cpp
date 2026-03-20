@@ -6,9 +6,9 @@ using namespace std;
 
 // Default constructor
 Date::Date(){
-   int month = 1;
-   int day = 1;
-   int year = 0000;
+   month = 1;
+   day = 1;
+   year = 0000;
    setNames();
 }
 

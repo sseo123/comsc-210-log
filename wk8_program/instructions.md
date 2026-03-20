@@ -7,7 +7,7 @@ Write the following two programs in C++. Upload your separate cpp and h files wh
 PROGRAM #1
 Date Exceptions
 
-Modify the Date class in the file (Date.cpp Download Date.cpp Download Date.cpp).
+Modify the Date class
 
 The class should implement the following exception classes:
 
