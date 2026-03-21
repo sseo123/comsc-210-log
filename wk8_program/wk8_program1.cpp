@@ -48,27 +48,4 @@ Date getValidDate(){
 int main(){
     Date today = getValidDate();
    return 0;
-}   
-
-
-
-
-
-// // Create a Date object and initialize it
-//    // using the overloaded constructor.
-//    Date today(12, 25, 2014);
-
-//    // Show the date in form #1.
-//    today.showDate1();
-   
-//    // Store a new month, day, and year
-//    // in the object.
-//    today.setMonth(6);
-//    today.setDay(16);
-//    today.setYear(2012);
-   
-//    // Show the date in form #2.
-//    today.showDate2();
-   
-//    // Show the date in form #3.
-//    today.showDate3();
+}  
