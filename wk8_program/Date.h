@@ -6,6 +6,7 @@
 
 class InvalidDay : public std::exception{
 public:
+    //virtual function that overrides the base exception class's what(), and later the what() function is called to get the error message
     virtual const char* what() const noexcept override {
         return "Error: Invalid day entered.";
     }

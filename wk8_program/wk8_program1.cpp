@@ -11,8 +11,6 @@ Date getValidDate(){
     Date userDate;
     do {
         try{
-            std::cout << "Date Exception Demonstration" << std::endl;
-
             std::cout << "Enter a month (1-12): ";
             std::cin >> month;
             std::cout << "Enter a day (1-31): ";
@@ -43,9 +41,9 @@ Date getValidDate(){
 }
 
 
-
 // Function main
 int main(){
+    std::cout << "Date Exception Demonstration" << std::endl;
     Date today = getValidDate();
-   return 0;
+    return 0;
 }  

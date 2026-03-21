@@ -1,3 +1,5 @@
+to compile cpp code: cd the file (find which one you want by ls), then g++ -o testName <.cpp files you need to compile>
+
 1. Why .h? 
     You use a .h file because .cpp files are independant and they don't know what's going on in each file
     for each .cpp file, your compiler generates an obj file, and these compilation units are independant
