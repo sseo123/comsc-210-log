@@ -24,6 +24,11 @@ std::string parseFileIntoString() {
 
 std::set<std::string> createSet() {
     std::string longString = parseFileIntoString();
+
+    for (char &c : longString) {
+         c = std::tolower((unsigned char)c);
+    } 
+
     std::set<std::string> mySet;
 
     for (int i = 0; i < longString.length(); i++) {
