@@ -3,7 +3,7 @@
 #include <string>
 #include <set>
 
-std::string parseFileIntoString();
-std::set<std::string> createSet();
+std::string parseFileIntoString(std::string fileName);
+std::set<std::string> createSet(std::string fileName);
 
 #endif
