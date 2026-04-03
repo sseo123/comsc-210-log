@@ -6,9 +6,9 @@
 #include <string>
 #include <set>
 
-std::string parseFileIntoString() {
+std::string parseFileIntoString(std::string fileName) {
     std::ifstream file;
-    file.open("sample.txt");
+    file.open(fileName);
 
     if (file.fail()) {
         return "File failed to open";
@@ -23,8 +23,8 @@ std::string parseFileIntoString() {
     return file_contents;
 }
 
-std::set<std::string> createSet() {
-    std::string longString = parseFileIntoString();
+std::set<std::string> createSet(std::string fileName) {
+    std::string longString = parseFileIntoString(fileName);
 
     for (char &c : longString) {
          c = std::tolower((unsigned char)c);
@@ -48,7 +48,15 @@ std::set<std::string> createSet() {
 }
 
 int main() {
-    std::set<std::string> mySet = createSet();
+    std::string fileName;
+    
+    std::cout << "Enter the filename: ";
+    getline(std::cin, fileName);
+    std::cout << std::endl;
+
+    std::cout << "Unique words found in the file:" << std::endl;
+
+    std::set<std::string> mySet = createSet(fileName);
     for (std::string uniqueWord : mySet) {
         std::cout << uniqueWord << std::endl;
     }
