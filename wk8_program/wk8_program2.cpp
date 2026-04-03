@@ -1,5 +1,6 @@
 #include <iostream>
 
+//template for when you want to return the minimum value
 template <typename T> T minimum(T parameter1, T parameter2) {
     if (parameter1 > parameter2) {
         return parameter2;
@@ -8,6 +9,7 @@ template <typename T> T minimum(T parameter1, T parameter2) {
     }
 }
 
+//template for when you want to return the max value
 template <typename T> T maximum(T parameter1, T parameter2) {
     if (parameter1 > parameter2) {
         return parameter1;
@@ -56,6 +58,7 @@ void charCase() {
 int main() {
     std::cout << "Function Template Demonstration" << std::endl;
 
+    //calling each of the cases like the example showed
     intCase();
     doubleCase();
     charCase();
