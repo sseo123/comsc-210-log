@@ -27,6 +27,10 @@ quick
 the
 was
 
+how to approach this:
+
+- get the sample.txt file into one big string. Once you get it into a string, you want to get each word in the string and append that to an array. Then create a set out of that array to get the unique words. return that set
+
 PROGRAM 2:
 Capital Quiz
 

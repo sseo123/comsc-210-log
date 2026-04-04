@@ -66,6 +66,8 @@ void playGame() {
     // state is, check that states capital, then pop the number you just got from the vector. That way you'll
     // never traverse the array again and get a 3. That also means that you would need to resize the vector by -1
 
+
+    // initalize the vector with nums 0 - 49
     std::vector<int> myVector(50);
     for (int i = 0; i < 50; i++) {
         myVector[i] = i;
@@ -75,17 +77,24 @@ void playGame() {
     int incorrectCount = 0;
     std::string userAns;
 
+    //so the game asks different states with each run
     srand(time(0));
 
     do {
+
+        // handle edge case if you go through all 50 states
         if (myVector.size() < 1) { 
             std::cout << "You've gone through all 50 states!";
             break;
          }
 
+        //this was to get the location of the vector so we could erase this value later
         int randomNum = rand() % myVector.size();
+
+        //get the state index stored at the vector value
         int vectorNum = myVector.at(randomNum);
     
+        //traverse the map
         auto it = stateCapitals.begin();
         std::advance(it, vectorNum);
         std::string state = it->first;
@@ -95,8 +104,10 @@ void playGame() {
         std::cout << "What is the capital of " << state << "? ";
         getline(std::cin, userAns);
         
+        //if quit just break
         if (userAns == "quit") { break; }
 
+        //check if the answer is correct or incorrect
         if (userAns == capital) {
             std::cout << "Correct!" << std::endl;
             correctCount++;
