@@ -78,11 +78,16 @@ void playGame() {
     srand(time(0));
 
     do {
+        if (myVector.size() < 1) { 
+            std::cout << "You've gone through all 50 states!";
+            break;
+         }
 
         int randomNum = rand() % myVector.size();
+        int vectorNum = myVector.at(randomNum);
     
         auto it = stateCapitals.begin();
-        std::advance( it, randomNum);
+        std::advance(it, vectorNum);
         std::string state = it->first;
         std::string capital = it->second;
 
@@ -95,14 +100,18 @@ void playGame() {
         if (userAns == capital) {
             std::cout << "Correct!" << std::endl;
             correctCount++;
+            std::cout << std::endl;
         } else{
             std::cout << "Incorrect. The correct answer is " << capital << "." << std::endl;
             incorrectCount++;
+            std::cout << std::endl;
         }
 
         myVector.erase(myVector.begin() + randomNum);
 
     } while (!(userAns == "quit"));
+
+    std::cout << std::endl;
 
     std::cout << "Quiz complete!" << std::endl;
     std::cout << "Correct answers: " << correctCount << std::endl;
