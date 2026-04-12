@@ -50,6 +50,12 @@ void LinkedList::insert(int location, int insertVal) {
         curr = curr->next;
     }
 
+    if (curr == nullptr) {
+        std::cout << "Position out of range." << std::endl;
+        delete newNode;
+        return;
+    }
+    
     newNode->next = curr->next;
     curr->next = newNode;
 }

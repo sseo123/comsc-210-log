@@ -5,17 +5,17 @@ struct Node {
     int data;
     Node* next;
     
-    // Constructor for Node
+   
     Node(int val) : data(val), next(nullptr) {}
 };
 
 class LinkedList {
 private:
-    Node* head;  // Private member - encapsulated
+    Node* head;
     
 public:
-    LinkedList();              // Constructor
-    ~LinkedList();             // Destructor - IMPORTANT for cleanup
+    LinkedList();
+    ~LinkedList();
     
     void append(int val);
     void insert(int location, int val);

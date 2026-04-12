@@ -33,6 +33,7 @@ int main() {
 
                 list.append(appendValue);
                 std::cout << "Value appended." << std::endl;
+                std::cout << std::endl;
                 break;
 
             case 2:
@@ -41,24 +42,30 @@ int main() {
                 std::cout << "Enter position to insert: ";
                 std::cin >> insertPosition;
 
-                list.insert(insertValue, insertPosition);
-                std::cout << "Value inserted.";
+                list.insert(insertPosition, insertValue);
+                std::cout << "Value inserted." << std::endl;
+                std::cout << std::endl;
                 break;
 
             case 3:
-                std::cout << "Enter position to delete";
+                std::cout << "Enter position to delete: ";
                 std::cin >> deletePos;
 
                 list.deleteAt(deletePos);
                 std::cout << "Node deleted" << std::endl;
+                std::cout << std::endl;
                 break;
 
             case 4:
                 std::cout << "Current list: ";
                 list.display();
+                std::cout << std::endl;
                 break;
 
             case 5: 
+                std::cout << "Exiting program..." << std::endl;
+                std::cout << "Destroying linked list..." << std::endl;
+                std::cout << "All nodes deleted." << std::endl;
                 break;
 
             default:
@@ -68,5 +75,5 @@ int main() {
     } while (userInput != 5);
 
 
-    return -;
+    return 0;
 }
