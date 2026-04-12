@@ -1,3 +1,4 @@
+#include "wk11_LinkedList1.cpp"
 #include <iostream>
 
 int main() {
@@ -18,7 +19,7 @@ int main() {
     int appendValue;
     int deleteValue;
     int insertValue;
-    int insertPosition;
+    int insertPos;
 
     do {
         std::cout << "Enter your choice: ";
@@ -43,9 +44,9 @@ int main() {
 
             case 3:
                 std::cout << "Enter position to delete";
-                std::cin >> deleteValue;
+                std::cin >> deletePos;
 
-                deleteNode(deleteValue);
+                deleteNode(deletePos);
                 std::cout << "Node deleted" << std::endl;
             case 4:
                 std::cout << "Current list: ";
