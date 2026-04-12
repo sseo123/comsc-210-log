@@ -1,8 +1,9 @@
 Write the following two programs in C++. Upload two separate cpp and h files where applicable labeled wk11_LinkedList1.h, wk11_LinkedList1.cpp, wk11_driver1.cpp wk11_wk11_LinkedList2.h, wk11_LinkedList2.cpp, and wk11_driver2.cpp respectively.
 
-\*Include meaningful comments throughout your code explaining the purpose of variables, logic, and major steps.
+Include meaningful comments throughout your code explaining the purpose of variables, logic, and major steps.
 
-Program 1: Your Own Linked List
+PROGRAM 1
+Your Own Linked List
 
 Design your own linked list class to hold a series of integers. The class should have member functions for appending, inserting, and deleting nodes. Don’t forget to add a destructor that destroys the list. Demonstrate the class with a driver program. See output of an example driver program below.
 
