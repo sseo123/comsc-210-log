@@ -1,12 +1,11 @@
 #include "wk11_LinkedList1.h"
 #include <iostream>
 
-// Constructor
+
 LinkedList::LinkedList() {
     head = nullptr;
 }
 
-// Destructor - CRITICAL for memory cleanup
 LinkedList::~LinkedList() {
     Node* curr = head;
     while (curr != nullptr) {
@@ -44,7 +43,7 @@ void LinkedList::insert(int location, int insertVal) {
     Node* curr = head;
     for (int i = 0; i < location - 1; i++) {
         if (curr == nullptr) {
-            cout << "Position out of range." << endl;
+            std::cout << "Position out of range." << std::endl;
             delete newNode;
             return;
         }
@@ -57,7 +56,7 @@ void LinkedList::insert(int location, int insertVal) {
 
 void LinkedList::deleteAt(int deletePosition) {
     if (head == nullptr) {
-        cout << "List is empty." << endl;
+        std::cout << "List is empty." << std::endl;
         return;
     }
 
@@ -71,14 +70,14 @@ void LinkedList::deleteAt(int deletePosition) {
 
     for (int i = 0; i < deletePosition - 2; i++) {
         if (curr == nullptr || curr->next == nullptr) {
-            cout << "Position out of range." << endl;
+            std::cout << "Position out of range." << std::endl;
             return;
         }
         curr = curr->next;
     }
 
     if (curr->next == nullptr) {
-        cout << "Position out of range." << endl;
+        std::cout << "Position out of range." << std::endl;
         return;
     }
 
@@ -88,19 +87,19 @@ void LinkedList::deleteAt(int deletePosition) {
 }
 
 void LinkedList::display() const {
-    cout << "Current list: ";
+
     if (head == nullptr) {
-        cout << "(empty)" << endl;
+        std::cout << "(empty)" << std::endl;
         return;
     }
 
     Node* curr = head;
     while (curr != nullptr) {
-        cout << curr->data;
+        std::cout << curr->data;
         if (curr->next != nullptr) {
-            cout << " -> ";
+            std::cout << " -> ";
         }
         curr = curr->next;
     }
-    cout << endl;
+    std::cout << std::endl;
 }
