@@ -7,7 +7,6 @@ LinkedList::LinkedList() {
     head = nullptr;
 }
 
-
 LinkedList::~LinkedList() {
     Node* current = head;
     
@@ -28,7 +27,7 @@ void LinkedList::append(int value) {
     newNode->data = value;
     newNode->next = nullptr;
     
-    // If the list is empty, make the new node the head
+    // If the list is empty then you can just make the new node the head
     if (head == nullptr) {
         head = newNode;
     } else {
@@ -38,13 +37,11 @@ void LinkedList::append(int value) {
             current = current->next;
         }
         
-        // Attach the new node at the end
+        //Attach the new node at the end
         current->next = newNode;
     }
 }
 
-// Inserts a new node with the given value at the specified position
-// Position numbering starts at 0 (position 0 means before the first node)
 void LinkedList::insert(int value, int position) {
 
     if (position < 0) {
@@ -64,7 +61,6 @@ void LinkedList::insert(int value, int position) {
         return;
     }
     
-    // Traverse to find the node before the insertion position
     Node* current = head;
     int currentPos = 0;
     
@@ -87,7 +83,7 @@ void LinkedList::insert(int value, int position) {
 
 
 void LinkedList::deleteAt(int position) {
-    // Check if the list is empty
+
     if (head == nullptr) {
         cout << "List is empty. Nothing to delete." << endl;
         return;
@@ -107,7 +103,6 @@ void LinkedList::deleteAt(int position) {
         return;
     }
     
-    // Traverse to find the node before the one to delete
     Node* current = head;
     int currentPos = 0;
     
@@ -128,7 +123,6 @@ void LinkedList::deleteAt(int position) {
     delete temp;
 }
 
-// Displays the entire linked list in the format: value1 -> value2 -> value3
 void LinkedList::display() const {
     cout << "Current list: ";
     
@@ -163,20 +157,16 @@ void LinkedList::reverse() {
     Node* current = head;
     Node* next = nullptr;
     
-    // Traverse the entire list and reverse all pointers
     while (current != nullptr) {
         // Save the next node before we change current->next
         next = current->next;
         
-        // Reverse the link: make current node point to previous node
         current->next = prev;
         
-        // Move prev and current one step forward
         prev = current;
         current = next;
     }
     
-    // Update head to point to the last node (which is now the first)
     head = prev;
 }
 

@@ -6,6 +6,8 @@ LinkedList::LinkedList() {
     head = nullptr;
 }
 
+
+// Deallocate all of the nodes in the Linked List
 LinkedList::~LinkedList() {
     Node* curr = head;
     while (curr != nullptr) {
@@ -15,9 +17,11 @@ LinkedList::~LinkedList() {
     }
 }
 
+// Append a new node with the gven value to the end of the list
 void LinkedList::append(int appendVal) {
     Node* newNode = new Node(appendVal);
 
+    // Edge case if the list is empty
     if (head == nullptr) {
         head = newNode;
         return;
@@ -27,6 +31,7 @@ void LinkedList::append(int appendVal) {
     while (currNode->next != nullptr) {
         currNode = currNode->next;
     }
+
 
     currNode->next = newNode;
 }
@@ -55,10 +60,11 @@ void LinkedList::insert(int location, int insertVal) {
         delete newNode;
         return;
     }
-    
+
     newNode->next = curr->next;
     curr->next = newNode;
 }
+
 
 void LinkedList::deleteAt(int deletePosition) {
     if (head == nullptr) {
@@ -68,6 +74,7 @@ void LinkedList::deleteAt(int deletePosition) {
 
     Node* curr = head;
 
+    // Edge case if you're deleting the head node 
     if (deletePosition == 1) {
         head = curr->next;
         delete curr;
@@ -82,6 +89,7 @@ void LinkedList::deleteAt(int deletePosition) {
         curr = curr->next;
     }
 
+    // Verify that the node deleted actually exists
     if (curr->next == nullptr) {
         std::cout << "Position out of range." << std::endl;
         return;
