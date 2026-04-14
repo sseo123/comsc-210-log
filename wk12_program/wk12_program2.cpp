@@ -10,6 +10,8 @@ std::string checkPalindrome(std::string word) {
     std::stack<char> s;
 
     for (char l : word) {
+        // this check wouldn't be needed if the user just typed "racecar", but if they typed "RaCe car" it will be needed
+        // also deals with spaces
         if (std::isalpha(l)) {
             char newLetter = std::tolower(l);
             q.push(newLetter);
@@ -18,7 +20,9 @@ std::string checkPalindrome(std::string word) {
         
     }
 
+    //keep checking as long as there are char in the queue
     while (!q.empty()) {
+        // then once they're both complete, the popped char from stack == dequeue from queue
         if (q.front() == s.top()) {
             q.pop();
             s.pop();
@@ -42,11 +46,3 @@ int main() {
 
     return 0;
 }
-
-// use a queue<char> to enqueue char in the order they appear
-// use a stack<char> to push char as they appear
-
-// idea, for every char in string:
-// push to stack, and enqueue to queue
-// then once they're both complete, the popped char from stack == dequeue from queue
-// if stack.empty() and queue.empty() and nothing broke, return worked
