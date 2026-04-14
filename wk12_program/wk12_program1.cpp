@@ -1,4 +1,3 @@
-#include "wk12_program1.h"
 #include <iostream>
 #include <string>
 #include <stack>

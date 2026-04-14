@@ -10,8 +10,12 @@ std::string checkPalindrome(std::string word) {
     std::stack<char> s;
 
     for (char l : word) {
-        q.push(l);
-        s.push(l);
+        if (std::isalpha(l)) {
+            char newLetter = std::tolower(l);
+            q.push(newLetter);
+            s.push(newLetter);
+        }
+        
     }
 
     while (!q.empty()) {
