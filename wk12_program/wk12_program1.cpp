@@ -14,13 +14,15 @@ std::string isValid(std::string a) {
         {')','('}
     };
 
+
     for (char l : a) {
         if (l == '{' || l == '[' || l == '(') {
             s.push(l);
-        } else {
-            if ((!s.empty() && s.top()) == map[l]) {
-                s.pop();
+        } else if (l == '}' || l == ']' || l == ')') {
+            if (s.empty() || s.top() != map[l]) {
+                return "Not Balanced!";
             }
+            s.pop();
         }
     }
 
