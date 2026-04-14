@@ -2,7 +2,8 @@ Write the following two programs in C++. Upload two separate cpp and h files whe
 
 \*Include meaningful comments throughout your code explaining the purpose of variables, logic, and major steps.
 
-Program 1: Balanced Parentheses Checker (Stack Application)
+PROGRAM 1
+Balanced Parentheses Checker (Stack Application)
 
 Write a program that determines whether a string containing parentheses, brackets, and braces is balanced.
 
@@ -29,7 +30,8 @@ Output example
 Enter an expression: {[()]}
 Balanced!
 
-Program 2: Palindrome Checker With a Stack and Queue
+PROGRAM 2
+Palindrome Checker With a Stack and Queue
 
 Write a program that determines whether a word or sentence is a palindrome (reads the same forwards and backwards), ignoring spaces and punctuation.
 
