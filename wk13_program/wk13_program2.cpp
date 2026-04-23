@@ -9,10 +9,20 @@ int sumOfArray(int arr[], int n) {
 }
 
 int main() {
-    int numOfElements; 
+    std::string input; 
+    int numOfElements;
 
     std::cout << "Enter number of elements: ";
-    std::cin >> numOfElements;
+    getline(std::cin, input);
+
+    for (char c : input) {
+        if (!(isdigit(c))) {
+            std::cout << "invalid, not a number" << std::endl;
+            return 0;
+        }
+    }
+
+    numOfElements = std::stoi(input);
 
     if (numOfElements == 0) {
         std::cout << "Sum of Array Elements: 0" << std::endl;

@@ -15,4 +15,6 @@ int main() {
     std::cout << std::endl;
 
     sign(input);
+
+    return 0;
 }
