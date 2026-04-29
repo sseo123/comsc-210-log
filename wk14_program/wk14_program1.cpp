@@ -1,12 +1,14 @@
 #include <iostream>
 #include <queue>
 
+//create the node struct
 struct Node {
     int data;
     Node* left;
     Node* right;
 };
 
+//allocates memory for a new node and initializes its values
 Node* createNode(int data) {
     Node* newNode = new Node();
     newNode->data = data;
@@ -14,6 +16,8 @@ Node* createNode(int data) {
     return newNode;
 }
 
+//insert the node, left if it's less than the parent node, right if it's greater than the parent node
+//if there is no parent node, then initalize the binary tree with that node as the root
 Node* insert(Node* root, int data) {
     if (root == nullptr) {
         return createNode(data);
@@ -28,6 +32,7 @@ Node* insert(Node* root, int data) {
     return root;
 }
 
+//inorder search of a binary search tree with left, node, right order
 void inorder(Node* root, std::queue<int>& myQueue) {
     if (root != nullptr) {
         inorder(root->left, myQueue);
@@ -46,6 +51,7 @@ int main() {
     Node* root = nullptr;
 
     std::cout << "Inserting values into the binary tree: " << std::endl;
+    //loop over array numbers and insert each value into tree
     for (int num : numbers) {
         std::cout << num << " ";
         root = insert(root, num);

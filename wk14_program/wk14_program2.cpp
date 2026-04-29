@@ -3,8 +3,11 @@
 
 int main() {
 
+    //create array with numbers
     int numbers[] = {50, 30, 70, 20, 40, 60, 80}; 
+    //define Node type as int
     Node<int>* intRoot = nullptr;
+
 
     std::cout << "Inserting integers into the tree: " << std::endl;
     for (int num : numbers) {
@@ -30,7 +33,9 @@ int main() {
     std::cout << std::endl;
     std::cout << std::endl;
 
+    //create array with words
     std::string words[] = {"pear", "apple", "orange", "banana"};
+    //define node type as string
     Node<std::string>* stringRoot = nullptr;
 
 

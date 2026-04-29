@@ -2,7 +2,7 @@
 #define WK14_PROGRAM_H
 #include <iostream>
 
-
+//create the template (createNode and insert are the same as program 1, just now template functions)
 template <typename T>
 struct Node {
     T data;
@@ -37,6 +37,7 @@ Node<T>* insert(Node<T>* root, T data) {
 template <typename T>
 void inorder(Node<T>* root) {
     if (root != nullptr) {
+        //left, node, right order
         inorder(root->left);
         std::cout << root->data << " ";
         inorder(root->right);
@@ -48,6 +49,7 @@ void inorder(Node<T>* root) {
 template <typename T>
 void preorder(Node<T>* root) {
     if (root != nullptr) {
+        //node, left, right order
         std::cout << root->data << " ";
         preorder(root->left);
         preorder(root->right);
@@ -58,6 +60,7 @@ void preorder(Node<T>* root) {
 template <typename T>
 void postorder(Node<T>* root) {
     if (root != nullptr) {
+        //all the leaves from left, right, node order
         postorder(root->left);
         postorder(root->right);
         std::cout << root->data << " ";
