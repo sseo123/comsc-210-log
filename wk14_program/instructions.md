@@ -2,7 +2,9 @@ Write the following two programs in C++. Upload your cpp and h files where appli
 
 *Include meaningful comments throughout your code explaining the purpose of variables, logic, and major steps.
 
-Program 1:   Queue Converter
+
+PROGRAM 1:
+Queue Converter
 
 Write a program that stores a series of numbers in a binary tree. Then have the program insert the values into a queue in ascending order. Dequeue the values and display them on the screen to confirm that they were stored in the proper order.
 
@@ -14,7 +16,11 @@ Inserting values into the binary tree:
 Dequeuing values from queue (should be in ascending order):
 20 30 40 50 60 70 80
 
-Program 2:  Binary Tree Template
+
+
+
+PROGRAM 2:
+Binary Tree Template
 
 Write your own version of a class template that will create a binary tree that can hold values of any data type. Demonstrate the class with a driver program.
 
