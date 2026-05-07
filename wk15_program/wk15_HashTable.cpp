@@ -18,12 +18,12 @@ bool HashTable::isEmpty() const {
     return true;
 }
 
-int HashTable::hashFunction(int key) {
+int HashTable::hashFunction(long key) {
     int bucketLocation = key % tableSize;
     return bucketLocation;
 }
 
-void HashTable::insertItem(int key, std::string value) {
+void HashTable::insertItem(long key, std::string value) {
     int bucketLoc = hashFunction(key);
 
     Node* newNode = new Node();
@@ -34,7 +34,7 @@ void HashTable::insertItem(int key, std::string value) {
     buckets[bucketLoc] = newNode;
 }
 
-void HashTable::removeItem(int key) {
+void HashTable::removeItem(long key) {
     int bucketLoc = hashFunction(key);
     Node* current = buckets[bucketLoc];
     Node* previous = nullptr;
@@ -47,7 +47,7 @@ void HashTable::removeItem(int key) {
                 previous->next = current->next;
             }
             delete current;
-            std::cout << "deleted successfully" << std::endl;
+            std::cout << "Contact removed." << std::endl;
             return;
         }
         previous = current;
@@ -55,10 +55,9 @@ void HashTable::removeItem(int key) {
     }
 
     std::cout << "phone number not found" << std::endl;
-
 }
 
-std::string HashTable::searchTable(int key) {
+std::string HashTable::searchTable(long key) {
     int bucketLoc = hashFunction(key);
 
     Node* current = buckets[bucketLoc];

@@ -5,7 +5,7 @@
 class HashTable { 
 private:
     struct Node {
-        int phoneNumber;
+        long phoneNumber;
         std::string name;
         Node* next;
     };
@@ -16,10 +16,10 @@ private:
 public:
     HashTable();
     bool isEmpty() const;
-    int hashFunction(int key);
-    void insertItem(int key, std::string value);
-    void removeItem(int key);
-    std::string searchTable(int key);
+    int hashFunction(long key);
+    void insertItem(long key, std::string value);
+    void removeItem(long key);
+    std::string searchTable(long key);
     void printTable();
 };
 

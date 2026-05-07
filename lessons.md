@@ -44,3 +44,6 @@ to compile cpp code: cd the file (find which one you want by ls), then g++ -o te
 10. binary search tree:
    when you create a binary search tree, remember each node only have three components (datya, address of left and address of right). This means you can't just look at the value to the left or right, and in order to find it in c++ you have to point to it (->). For program 1 we did in order insertion, but there are other methods like preorder or postorder. 
    (honestly the syntax was challenging for this one)
+
+11. int vs long
+   the max an int can hold is. a 32 bit which is around 2.1 billion (2, 100, 000, 000), but if there is a number larger than this you need to hold it in something called a long (which is 64 bit and around 9.2 quintillion). This is also the reason why I used a long rather than an int in wk15_program

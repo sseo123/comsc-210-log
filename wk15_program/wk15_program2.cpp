@@ -3,7 +3,7 @@
 #include "wk15_HashTable.h"
 
 
-void contactFinder(HashTable& myTbl, int phoneNum) {
+void contactFinder(HashTable& myTbl, long phoneNum) {
     std::string result = myTbl.searchTable(phoneNum);
 
     if (result != "no match") {
@@ -51,19 +51,19 @@ int main() {
 
 
     //searching for the contact
-    int x = 4155552468;
+    long x = 4155552468;
     std::cout << "Searching for " << x << std::endl;
     contactFinder(myTable, x);
     std::cout << std::endl;
 
-    int y = 9255550000;
+    long y = 9255550000;
     std::cout << "Searching for " << y << std::endl;
     contactFinder(myTable, y);
     std::cout << std::endl;
 
     
     //removing contact 
-    int z = 5105559876;
+    long z = 5105559876;
     myTable.removeItem(z);
 
 
