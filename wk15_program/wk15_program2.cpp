@@ -2,7 +2,7 @@
 #include <string>
 #include "wk15_HashTable.h"
 
-
+//reusable function so the main doesn't get super cluttered
 void contactFinder(HashTable& myTbl, long phoneNum) {
     std::string result = myTbl.searchTable(phoneNum);
 
@@ -15,6 +15,7 @@ void contactFinder(HashTable& myTbl, long phoneNum) {
 
 
 int main() {
+    //create the object
     HashTable myTable;
 
     std::cout << "Hash Table Contact Demonstration" << std::endl;

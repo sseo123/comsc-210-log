@@ -3,6 +3,7 @@
 #include <string>
 
 HashTable::HashTable() {
+    //loop through table and initalize every bucket to nullptr
     for (int i = 0; i < tableSize; i++) {
         buckets[i] = nullptr;
     }
@@ -19,13 +20,14 @@ bool HashTable::isEmpty() const {
 }
 
 int HashTable::hashFunction(long key) {
+    //modulo to get the bucket location 0-9
     int bucketLocation = key % tableSize;
     return bucketLocation;
 }
 
 void HashTable::insertItem(long key, std::string value) {
     int bucketLoc = hashFunction(key);
-
+    //linked list with the new node, setting the phone Number and Name, then going to the next Node
     Node* newNode = new Node();
     newNode->phoneNumber = key;
     newNode->name = value;
@@ -36,9 +38,12 @@ void HashTable::insertItem(long key, std::string value) {
 
 void HashTable::removeItem(long key) {
     int bucketLoc = hashFunction(key);
+    //current node is the first node in the linked list, aka the head
     Node* current = buckets[bucketLoc];
+    //previous is nullptr so I can handle the case where we have to remove the head node in a linked list
     Node* previous = nullptr;
 
+    //while loops through the linked list till we either reach the node we need to remove or nullptr meaning the end
     while (current != nullptr) {
         if (current->phoneNumber == key) {
             if (previous == nullptr) {
@@ -54,6 +59,7 @@ void HashTable::removeItem(long key) {
         current = current->next;
     }
 
+    //if we reached nullptr that means the phone number didn't exist in this buckets linekd list
     std::cout << "phone number not found" << std::endl;
 }
 
@@ -71,7 +77,9 @@ std::string HashTable::searchTable(long key) {
     return "no match";
 }
 
+
 void HashTable::printTable() {
+    //display the hashtable
     for (int i = 0; i < tableSize; i++) {
         Node* current = buckets[i];
         std::cout << "Bucket " << i << ": ";
